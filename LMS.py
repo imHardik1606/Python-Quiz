@@ -41,8 +41,7 @@ class student:
 if __name__ == "__main__":
     centralLibrary = Library(["Algorithms", "Sherlock Holmes", "Django", "HTML Notes", "Python Notes", "C++ Notes", "Java Notes"])
     student = student()
-    while(True):
-        wlcMsg = '''
+    msg = ''' 
 ### Welcome to the Central library of the university ###
 Please Enter the option:
 1. List the names of all available books
@@ -50,9 +49,14 @@ Please Enter the option:
 3. Return a book
 4. Add a book to the library
 5. Exit the Library
+    '''
+    print(msg)
+    while(True):
+        wlcMsg = '''
+        Please Enter the option : 
         '''
         print(wlcMsg)
-        a = int(input("How can I help you: "))
+        a = int(input("How can I help you? : "))
         if a == 1:
             centralLibrary.displayBooks()
         elif a == 2:
